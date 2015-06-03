@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "bitbucket-pullrequest-template",
+  "description": "This extension provides templates of pullrequest on bitbucket",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://bitbucket.org/*"],
+      "js": ["asset/jquery.min.js", "asset/index.js"]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "asset/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "https://bitbucket.org/*"
+  ]
+}
